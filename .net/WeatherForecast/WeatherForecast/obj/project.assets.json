@@ -5240,11 +5240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
       "projectName": "WeatherForecast",
-      "projectPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\WeatherForecast\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\WeatherForecast\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5261,14 +5261,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\WeatherForecast\\Bl\\Bl.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\Bl\\Bl.csproj"
+            "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Bl\\Bl.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Bl\\Bl.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\WeatherForecast\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\Common\\Common.csproj"
+            "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Common\\Common.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\WeatherForecast\\Dal\\Dal.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\Dal\\Dal.csproj"
+            "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Dal\\Dal.csproj"
             }
           }
         }

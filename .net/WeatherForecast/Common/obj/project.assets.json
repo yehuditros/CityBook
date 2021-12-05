@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\WeatherForecast\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\Common\\Common.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\WeatherForecast\\Common\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\CityBook\\.net\\WeatherForecast\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

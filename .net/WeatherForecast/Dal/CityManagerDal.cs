@@ -13,107 +13,144 @@ namespace Dal
 
         public static int GetFavoriteCities()
         {
-
-
-            using (var context = new Models.WeatherForecatDBContext())
+            try
             {
-                return context.Cities.Where(t => t.IsFaorite == 1).ToList().Count();
+                using (var context = new Models.WeatherForecatDBContext())
+                {
+                    return context.Cities.Where(t => t.IsFaorite == 1).ToList().Count();
+
+                }
 
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
 
 
         }
 
         public static int AddToFavoriteCities(string city)
         {
-            using (var context = new Models.WeatherForecatDBContext())
+
+            try
             {
-                var c = context.Cities.Where(t => t.LabelCity == city).ToList().FirstOrDefault();
-                if (c != null)
+                using (var context = new Models.WeatherForecatDBContext())
                 {
-                    if (c.IsFaorite == 1)
-                        return 0;
+                    var c = context.Cities.Where(t => t.LabelCity == city).ToList().FirstOrDefault();
+                    if (c != null)
+                    {
+                        if (c.IsFaorite == 1)
+                            return 0;
+                        else
+                        {
+                            c.IsFaorite = 1;
+                            context.SaveChanges();
+                            return 1;
+                        }
+
+                    }
                     else
                     {
-                        c.IsFaorite = 1;
+                        Models.Cities ci = new Models.Cities(city, "");
+                        ci.IsFaorite = 1;
+                        context.Cities.Add(ci);
                         context.SaveChanges();
                         return 1;
                     }
-
-                }
-                else
-                {
-                    Models.Cities ci = new Models.Cities(city, "");
-                    ci.IsFaorite = 1;
-                    context.Cities.Add(ci);
-                    context.SaveChanges();
-                    return 1;
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         public static void AddToSearch(Common.Search search)
         {
-            using (var context = new Models.WeatherForecatDBContext())
+            try
             {
-                var c = context.Letters.Where(t => t.SearchLetters == search.searchLetters).ToList().FirstOrDefault();
-                if (c == null)
+                using (var context = new Models.WeatherForecatDBContext())
                 {
-                    context.Letters.Add(new Models.Letters(search.searchLetters));
-                    var l = context.Letters.Where(t => t.SearchLetters == search.searchLetters).ToList().FirstOrDefault();
-                    foreach (var item in search.cities)
+                    var c = context.Letters.Where(t => t.SearchLetters == search.searchLetters).ToList().FirstOrDefault();
+                    if (c == null)
                     {
-                        var city = context.Cities.Where(t => t.LabelCity == item.label).ToList().FirstOrDefault();
-                        if (city == null)
+                        context.Letters.Add(new Models.Letters(search.searchLetters));
+                        var l = context.Letters.Where(t => t.SearchLetters == search.searchLetters).ToList().FirstOrDefault();
+                        foreach (var item in search.cities)
                         {
-                            context.Cities.Add(new Models.Cities(item.label, item.key));
-                            city = context.Cities.Where(t => t.KeyCity == item.key).ToList().FirstOrDefault();
+                            var city = context.Cities.Where(t => t.LabelCity == item.label).ToList().FirstOrDefault();
+                            if (city == null)
+                            {
+                                context.Cities.Add(new Models.Cities(item.label, item.key));
+                                city = context.Cities.Where(t => t.KeyCity == item.key).ToList().FirstOrDefault();
+                            }
+                            var cl = new Models.CitiesAndLetters(l.Id, city.Id);
+                            context.CitiesAndLetters.Add(cl);
+                            context.SaveChanges();
                         }
-                        var cl = new Models.CitiesAndLetters(l.Id, city.Id);
-                        context.CitiesAndLetters.Add(cl);
                         context.SaveChanges();
                     }
-                    context.SaveChanges();
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
 
         }
 
         public static Common.Search[] GetAllSearches()
         {
-            List<Common.Search> ls = new List<Common.Search>();
 
-
-            using (var context = new Models.WeatherForecatDBContext())
+            try
             {
-                var searches = context.Letters.Select(t => t).ToList();
-                if (searches != null)
+                List<Common.Search> ls = new List<Common.Search>();
+
+
+                using (var context = new Models.WeatherForecatDBContext())
                 {
-                    foreach (var item in searches)
+                    var searches = context.Letters.Select(t => t).ToList();
+                    if (searches != null)
                     {
-                        Common.Search s = new Common.Search();
-                        s.searchLetters = item.SearchLetters;
-                        List<Common.Result> lls = new List<Common.Result>();
-                        var cid = context.CitiesAndLetters.Where(t => t.LettersId == item.Id).Select(t => t.CityId).ToList();
-                        foreach (var c in cid)
+                        foreach (var item in searches)
                         {
+                            Common.Search s = new Common.Search();
+                            s.searchLetters = item.SearchLetters;
+                            List<Common.Result> lls = new List<Common.Result>();
+                            var cid = context.CitiesAndLetters.Where(t => t.LettersId == item.Id).Select(t => t.CityId).ToList();
+                            foreach (var c in cid)
+                            {
 
-                            var cdetails = context.Cities.Where(t => t.Id == c).ToList().FirstOrDefault();
-                            Common.Result r = new Common.Result(cdetails.LabelCity, cdetails.KeyCity);
-                            lls.Add(r);
+                                var cdetails = context.Cities.Where(t => t.Id == c).ToList().FirstOrDefault();
+                                Common.Result r = new Common.Result(cdetails.LabelCity, cdetails.KeyCity);
+                                lls.Add(r);
 
 
+                            }
+                            var f = lls.ToArray();
+                            s.cities = f;
+                            ls.Add(s);
                         }
-                        var f = lls.ToArray();
-                        s.cities = f;
-                        ls.Add(s);
-                    }
-                    var ff = ls.ToArray();
-                    return ff;
+                        var ff = ls.ToArray();
+                        return ff;
 
+                    }
+                    return null;
                 }
-                return null;
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+    
 
 
         }
