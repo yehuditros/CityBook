@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Bl.deps.json
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Bl.dll
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\ref\Bl.dll
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Bl.pdb
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Common.dll
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Dal.dll
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Common.pdb
+C:\Users\User\source\repos\WeatherForecast\Bl\bin\Debug\net5.0\Dal.pdb
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.AssemblyInfo.cs
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.csproj.CopyComplete
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.dll
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\ref\Bl.dll
+C:\Users\User\source\repos\WeatherForecast\Bl\obj\Debug\net5.0\Bl.pdb

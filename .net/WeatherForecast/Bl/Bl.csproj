@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Dal\Dal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Common">
+      <HintPath>..\Common\bin\Debug\net5.0\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Dal">
+      <HintPath>..\Dal\bin\Debug\net5.0\Dal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
